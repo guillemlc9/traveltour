@@ -974,11 +974,6 @@ body{
 .hamburger::before { top: -8px; }
 .hamburger::after { top: 8px; }
 
-/* Amaga per defecte el selector d'idiomes clonat per al mòbil */
-.mobile-lang-switcher {
-    display: none;
-}
-
 /* Dins de la media query per a mòbils */
 @media screen and (max-width: 798px) {
     /* Mostra el selector clonat NOMÉS quan el menú mòbil està actiu */
