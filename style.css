@@ -534,8 +534,12 @@ body{
     z-index: 1000;
 }
 
-/* tab view */
+/* Amaga el selector d'idiomes clonat per defecte a TOTES les vistes */
+.mobile-lang-switcher {
+    display: none;
+}
 
+/* tab view */
 @media screen and (max-width: 996px) {
     .link-item{
         margin: 0 10px;
