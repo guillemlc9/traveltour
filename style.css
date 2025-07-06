@@ -524,6 +524,16 @@ body{
     padding: 10px 0;
 }
 
+/* Styling for the hamburger menu button */
+.nav-toggle {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    z-index: 1000;
+}
+
 /* tab view */
 
 @media screen and (max-width: 996px) {
@@ -939,16 +949,6 @@ body{
         padding-top: 15px;
         padding-bottom: 15px;
     }
-}
-
-/* Styling for the hamburger menu button */
-.nav-toggle {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    padding: 0;
-    z-index: 1000;
 }
 
 .hamburger {
