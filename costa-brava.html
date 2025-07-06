@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Brava - Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar bg"><a href="index.html"><img src="assets/logo.png" class="logo" alt="Logo"></a>
+        
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="links-container">
+            <li class="link-item"><a href="index.html" data-i18n-key="nav_home">Home</a></li>
+            <li class="link-item"><a href="experiences.html" data-i18n-key="nav_experiences">Experiences</a></li>
+            <li class="link-item"><a href="blog.html" data-i18n-key="nav_blog">Blog</a></li>
+            <li class="link-item"><a href="contact.html" data-i18n-key="nav_contact">Contact</a></li>
+        </ul>
+        <div class="language-switcher">
+            <a href="#" class="lang-link active" data-lang="ca">CA</a>
+            <span class="lang-separator">|</span>
+            <a href="#" class="lang-link" data-lang="es">ES</a>
+            <span class="lang-separator">|</span>
+            <a href="#" class="lang-link" data-lang="en">EN</a>
+        </div>
+    </nav>
+    <section class="experience-detail-section">
+        <h1 class="section-title" data-i18n-key="costa_brava_experience_title">Gourmet Weekend Getaway on the Costa Brava</h1>
+        <img src="img/img1.jpg" alt="Costa Brava Gastronomy">
+        <div class="experience-description">
+            <p data-i18n-key="costa_brava_desc_1"><strong>Indulge in a curated weekend of culinary excellence along the stunning Costa Brava
+                    coastline.</strong> This 3-day escape combines breathtaking Mediterranean scenery with top-tier
+                dining experiences for food lovers seeking something truly special.</p>
+
+            <p data-i18n-key="costa_brava_desc_day1"><strong>🍽️ Day 1 – Arrival & Dinner</strong><br>
+                Arrive in the afternoon and settle into a charming coastal setting. In the evening, enjoy dinner at a
+                handpicked restaurant known for its character and regional flair.</p>
+
+            <p data-i18n-key="costa_brava_desc_day2"><strong>🍷 Day 2 – Wine & Michelin Discovery</strong><br>
+                Begin the day with a guided wine tasting and winery tour featuring select Catalan wines. In the
+                afternoon or evening, dine at a Michelin-starred restaurant — savoring the finest in local gastronomy
+                paired with exquisite wines.</p>
+
+            <p data-i18n-key="costa_brava_desc_day3"><strong>👨‍🍳 Day 3 – Private Chef or Final Michelin Stop</strong><br>
+                Conclude your weekend with a memorable lunch — either at another Michelin-starred venue or with a
+                private chef experience brought directly to your accommodation for a more intimate, personalized touch.
+            </p>
+
+            <p data-i18n-key="costa_brava_desc_final">This experience blends fine dining, wine culture, and scenic relaxation in one unforgettable weekend.</p>
+        </div>
+    </section>
+
+    <section class="embedded-contact-section">
+        <h2 class="section-title" data-i18n-key="embedded_form_title">Want this experience?</h2>
+        <p class="section-para" data-i18n-key="embedded_form_para">Let us know how we can help you plan your dream trip.</p>
+        <div class="contact-form-inner">
+            <form action="https://formspree.io/f/xeoknlja" method="POST" style="width: 100%;">
+                <label for="name" data-i18n-key="form_name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-i18n-key="form_email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message" data-i18n-key="form_message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n-key="form_disclaimer">We usually respond within 1 business day.</p>
+
+                <button type="submit" data-i18n-key="embedded_form_button">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img src="assets/logo.png" class="footer-logo" alt="">
+        <div class="footer-text">
+            <p data-i18n-key="footer_slogan">Travel the catalan country</p>
+            <p><span data-i18n-key="footer_email">Email</span> - support@travel.com</p>
+            <p><span data-i18n-key="footer_phone">Phone</span> - 99 88 776655</p>
+        </div>
+        <p class="copyright-line" data-i18n-key="footer_copyright">This design is a concept design.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="translation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomic Barcelona - Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar bg"><a href="index.html"><img src="assets/logo.png" class="logo" alt="Logo"></a>
+        
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="links-container">
+                <li class="link-item"><a href="index.html" data-i18n-key="nav_home">Home</a></li>
+                <li class="link-item"><a href="experiences.html" data-i18n-key="nav_experiences">Experiences</a></li>
+                <li class="link-item"><a href="blog.html" data-i18n-key="nav_blog">Blog</a></li>
+                <li class="link-item"><a href="contact.html" data-i18n-key="nav_contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <a href="#" class="lang-link active" data-lang="ca">CA</a>
+                <span class="lang-separator">|</span>
+                <a href="#" class="lang-link" data-lang="es">ES</a>
+                 <span class="lang-separator">|</span>
+                <a href="#" class="lang-link" data-lang="en">EN</a>
+            </div>
+    </nav>
+    <section class="experience-detail-section">
+        <h1 class="section-title" data-i18n-key="gastro_experience_title">24-Hour or Weekend Michelin Star Experience</h1>
+        <img src="img/img4.jpg" alt="Michelin Star Dining in Barcelona">
+        <div class="experience-description">
+            <p data-i18n-key="gastro_desc_1"><strong>Embark on a luxury culinary journey through Barcelona’s Michelin-starred landscape.</strong> With 29 Michelin-starred restaurants holding 39 stars across the city, Barcelona is a true gastronomic capital — and this experience is your golden ticket.</p>
+
+            <p data-i18n-key="gastro_desc_itinerary"><strong>🍽️ Tailored Fine Dining Itinerary</strong><br>
+            Choose between a one-day tasting tour or a full weekend itinerary. We’ll craft a path through two or three of the city’s most iconic Michelin restaurants, each offering a unique take on Catalan and global cuisine, from avant-garde innovation to elevated tradition.</p>
+
+            <p data-i18n-key="gastro_desc_tour"><strong>🌟 A Gourmet Tour Designed for You</strong><br>
+            Whether you’re a fine-dining connoisseur or simply curious to try the best, we’ll adapt the experience to your tastes, dietary needs, and schedule. Add optional extras like wine pairings, chef table reservations, or exclusive kitchen visits.</p>
+
+            <p data-i18n-key="gastro_desc_enhance"><strong>🍷 Enhance the Experience</strong><br>
+            Make it a weekend to remember by combining the culinary experience with luxury accommodation or cultural activities in Barcelona — from modernist architecture to local food markets.</p>
+        </div>
+    </section>
+
+    <section class="embedded-contact-section">
+        <h2 class="section-title" data-i18n-key="embedded_form_title">Want this experience?</h2>
+        <p class="section-para" data-i18n-key="embedded_form_para">Let us know how we can help you plan your dream trip.</p>
+        <div class="contact-form-inner">
+            <form action="https://formspree.io/f/xeoknlja" method="POST" style="width: 100%;">
+                <label for="name" data-i18n-key="form_name">Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email" data-i18n-key="form_email">Email</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message" data-i18n-key="form_message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            
+                <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n-key="form_disclaimer">We usually respond within 1 business day.</p>
+            
+                <button type="submit" data-i18n-key="embedded_form_button">Send</button>
+            </form>
+        </div>
+    </section>
+<footer class="footer">
+        <img src="assets/logo.png" class="footer-logo" alt="">
+        <div class="footer-text">
+            <p data-i18n-key="footer_slogan">Travel the catalan country</p>
+            <p><span data-i18n-key="footer_email">Email</span> - support@travel.com</p>
+            <p><span data-i18n-key="footer_phone">Phone</span> - 99 88 776655</p>
+        </div>
+        <p class="copyright-line" data-i18n-key="footer_copyright">This design is a concept design.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="translation.js"></script>
+
+</body>
+</html>

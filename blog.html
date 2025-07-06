@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar bg">
+        <a href="index.html"><img src="assets/logo.png" class="logo" alt="Logo"></a>
+        
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="links-container">
+                <li class="link-item"><a href="index.html" data-i18n-key="nav_home">Home</a></li>
+                <li class="link-item"><a href="experiences.html" data-i18n-key="nav_experiences">Experiences</a></li>
+                <li class="link-item"><a href="blog.html" data-i18n-key="nav_blog">Blog</a></li>
+                <li class="link-item"><a href="contact.html" data-i18n-key="nav_contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <a href="#" class="lang-link active" data-lang="ca">CA</a>
+                <span class="lang-separator">|</span>
+                <a href="#" class="lang-link" data-lang="es">ES</a>
+                 <span class="lang-separator">|</span>
+                <a href="#" class="lang-link" data-lang="en">EN</a>
+            </div>
+    </nav>
+
+    <section class="explore-section" style="padding-top: 120px;">
+        <h1 class="section-title" data-aos="fade-up" data-i18n-key="blog_title">Our Blog</h1>
+        <p class="section-para" data-aos="fade-up" data-i18n-key="blog_para">Stories, guides, and inspiration for your next Catalan adventure.</p>
+
+        <div class="experience-grid">
+            <a href="foodie-catalonia.html" class="tour-card-link">
+                <div class="tour-card" data-aos="fade-up">
+                    <img src="img/sea-dine.jpg" class="tour-img" alt="Costa Brava">
+                    <div class="tour-body">
+                        <h3 class="tour-name" data-i18n-key="blog_post_title">Why Catalonia is a hidden gem for foodies</h3>
+                        <p class="tour-action" data-i18n-key="read_post">Read Post</p>
+                    </div>
+                </div>
+            </a>
+
+            </div>
+    </section>
+
+    <footer class="footer">
+        <img src="assets/logo.png" class="footer-logo" alt="">
+        <div class="footer-text">
+            <p data-i18n-key="footer_slogan">Travel the catalan country</p>
+            <p><span data-i18n-key="footer_email">Email</span> - support@travel.com</p>
+            <p><span data-i18n-key="footer_phone">Phone</span> - 99 88 776655</p>
+        </div>
+        <p class="copyright-line" data-i18n-key="footer_copyright">This design is a concept design.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+    <script src="translation.js"></script>
+
+</body>
+</html>
