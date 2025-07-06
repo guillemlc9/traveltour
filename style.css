@@ -707,7 +707,7 @@ body{
 
     .links-container.active .mobile-lang-switcher {
         display: flex !important; /* Mostra el CLONAT només quan el menú està obert */
-        margin-top: 2rem;
+        margin-top: 4rem;
         padding: 1rem;
         border-top: 1px solid #2D2D2D;
         width: 80%;
