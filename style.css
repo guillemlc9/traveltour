@@ -726,3 +726,162 @@ body{
     .service-card { margin-top: 20px; }
     .travel-grid { columns: 1; }
 }
+
+/* ===== ESTILS PÀGINA "About Us" ===== */
+
+.about-us-section {
+    padding: 140px 10vw 80px 10vw;
+    background-color: #f9f7f5; /* Un color crema/blanc trencat, com demanaves */
+    color: #333; /* Text fosc per a contrast */
+}
+
+.about-us-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Secció d'Introducció --- */
+.about-intro {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.about-intro-text {
+    flex: 1;
+}
+
+.about-intro-text .section-title {
+    text-align: left;
+    color: var(--primary-color); /* Títol amb el color corporatiu */
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-intro-text p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-intro-image {
+    flex: 0 0 40%;
+}
+
+.about-intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* --- Secció Fundadors --- */
+.about-founders {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.founders-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.founder-card {
+    flex-basis: 300px;
+    text-align: center;
+}
+
+.founder-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
+}
+
+.founder-card h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* --- Secció Valors --- */
+.about-values {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.value-card {
+    text-align: center;
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    /* Pots afegir un color a les icones SVG amb filter si són negres */
+    /* filter: invert(21%) sepia(58%) saturate(2222%) hue-rotate(345deg) brightness(89%) contrast(84%); */
+}
+
+.value-card h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* --- Secció CTA --- */
+.about-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* --- RESPONSIVE PER A MÒBILS --- */
+@media screen and (max-width: 996px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .about-intro {
+        flex-direction: column-reverse; /* Imatge a dalt, text a baix */
+    }
+
+    .about-intro-text .section-title,
+    .about-founders .section-title,
+    .about-values .section-title {
+        text-align: center;
+    }
+    
+    .founders-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
