@@ -1,5 +1,5 @@
 // slider images array
-const sliderImgs = ["img1.jpg", "img2.jpg", "img3.webp", "img4.jpg", "img5.jpg", "img6.jpg"];
+const sliderImgs = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg"];
 let sliderImage = document.querySelector('.background-image');
 let sliderGrids = [...document.querySelectorAll('.grid-item')];
 
