@@ -222,13 +222,15 @@ body{
 }
 
 .section-para{
-    width: 50%;
+    width: 80%;
+    max-width: 800px;
     min-width: 300px;
     display: block;
     margin: 30px auto;
-    text-align: center;
-    line-height: 25px;
-    opacity: 0.6;
+    text-align: left;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size: 1.1rem
 }
 
 .tours-container{
@@ -260,22 +262,6 @@ body{
 
 .tour-card:last-child{
     grid-column: span 2;
-}
-
-.tour-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s;
-    z-index: -1;
-}
-
-.tour-card:hover .tour-img{
-    opacity: 0.8;
-    transform: scale(1.1);
 }
 
 .tour-name{
@@ -731,7 +717,7 @@ body{
 
 .about-us-section {
     padding: 140px 10vw 80px 10vw;
-    background-color: #f9f7f5; /* Un color crema/blanc trencat, com demanaves */
+    background-color: #f5f2eb; /* Un color crema/blanc trencat, com demanaves */
     color: #333; /* Text fosc per a contrast */
 }
 
@@ -884,4 +870,232 @@ body{
     .values-grid {
         grid-template-columns: 1fr;
     }
+}
+/* ===== ESTILS FINALS PER A LES TARGETES D'EXPERIÈNCIES ===== */
+
+.experience-grid .tour-card {
+    position: relative; /* Contenidor pare per al posicionament absolut */
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px; /* Alçada fixa per a totes les targetes */
+    background-color: #2a2a2a; /* Color de fons mentre carrega la imatge */
+    display: block; /* Resetejem flexbox de versions anteriors */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card-link:hover .tour-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* La imatge de fons de la targeta */
+.tour-card-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+.tour-card-link:hover .tour-card-background-img {
+    transform: scale(1.05); /* Efecte de zoom al passar el ratolí */
+}
+
+/* El degradat semitransparent */
+.tour-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+    z-index: 2; /* Per sobre de la imatge */
+}
+
+/* El contenidor del contingut de text */
+.tour-card-content {
+    position: relative;
+    z-index: 3; /* Per sobre del degradat */
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea tot el contingut a la part inferior */
+}
+
+/* Títol i subtítol */
+.tour-card .tour-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.tour-card .tour-subtitle {
+    font-size: 1rem;
+    color: #ccc;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Peu de la targeta: CTA i etiquetes */
+.tour-card-footer {
+    display: flex;
+    justify-content: space-between; /* CTA a l'esquerra, etiquetes a la dreta */
+    align-items: center;
+    margin-top: 1.5rem; /* Espai entre el títol/subtítol i el peu */
+}
+
+/* Enllaç d'acció (CTA) */
+.tour-card .tour-action {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.tour-card-link:hover .tour-action {
+    color: #fff;
+}
+
+/* Contenidor de les etiquetes */
+.tour-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* ===== ESTILS PÀGINA DE BLOG ===== */
+
+.blog-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnes per a ordinador */
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+
+.blog-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card-link:hover .blog-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card-image {
+    height: 240px; /* Alçada fixa per a les imatges del blog */
+    overflow: hidden;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card-link:hover .blog-card-image img {
+    transform: scale(1.05);
+}
+
+.blog-card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Fa que el contingut ocupi l'espai restant */
+}
+
+.blog-card-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.blog-card-excerpt {
+    color: #ccc;
+    opacity: 0.9;
+    margin-top: 15px;
+    flex-grow: 1; /* Empeny el CTA cap avall */
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.blog-card-cta {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 20px; /* Espai sobre el botó */
+    transition: color 0.3s ease;
+}
+
+.blog-card-link:hover .blog-card-cta {
+    color: #fff;
+}
+
+
+/* --- RESPONSIVE PER AL BLOG --- */
+@media screen and (max-width: 996px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnes per a tauleta */
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* 1 columna per a mòbil */
+    }
+}
+
+/* ===== ESTILS PER A LA SECCIÓ DE FUNDADORS SIMPLE ===== */
+
+.founders-container-simple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Espai entre els elements */
+    margin-top: 20px;
+}
+
+.founder-name {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.founder-separator {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--primary-color); /* Color vermell corporatiu */
 }
